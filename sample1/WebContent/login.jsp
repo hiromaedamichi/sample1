@@ -23,9 +23,10 @@
 		   line-height:1.6;
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
-		   font-size:12px;
-		   color:#FFB800;
-		   background:#110000;
+		   font-size:14px;
+		   color:#ffd700;
+		   background:url(img/reception.jpg) no-repeat ;
+		   background-size:cover;
 		}
 
 		table {
@@ -35,15 +36,15 @@
 
 		/* ========ID LAYOUT======== */
 		#top {
-		   width:780px;
+		   width:90%;
 		   margin:30px auto;
-		   border:1px solid #FFB800;
+		   border:1px solid #e9bc00;
 		}
 
 		#header {
 		   width: 100%;
-		   height: 80px;
-		   background-color:#CC0000;
+		   height: 40px;
+		   background-color:#990000;
 		}
 
 		#main {
@@ -54,8 +55,8 @@
 
 		#footer {
 			width: 100%;
-			height: 80px;
-			background-color:#CC0000;
+			height: 40px;
+			background-color:#990000;
 			clear:both;
 		}
 

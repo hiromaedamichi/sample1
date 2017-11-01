@@ -22,7 +22,9 @@
 		   font-family:Verdana, Helvetica, sans-serif;
 		   font-size:12px;
 		   color:black;
-		   background:#EEEEEE;
+		   background:url(img/front.jpg) no-repeat center scroll;
+
+
 		}
 
 		table {
@@ -32,15 +34,16 @@
 
 		/* ========TEMPLATE LAYOUT======== */
 		#top {
-		   width:780px;
+		   width:90%;
 		   margin:30px auto;
-		   border:1px solid #333;
+
 		}
 
 		#header {
 		   width: 100%;
-		   height: 40px;
+		   height: 60px;
 		   background-color:#BB0000;
+		   margin-top:-20px;
 		}
 
 		#main {
@@ -51,14 +54,23 @@
 
 		#footer {
 			width: 100%;
-			height: 40px;
+			height: 60px;
 			background-color:#BB0000;
 			clear:both;
 		}
 
 		#text-center {
 			display: inline-block;
-			text-align: center;
+			position:relative; top:400px;
+
+
+		}
+
+		#pr {
+	         width:300px;
+              margin:auto;
+	       font-size:20px;
+	         color:#FFA500;
 		}
 	</style>
 </head>
@@ -66,12 +78,16 @@
 
 	<div id="header">
 	 	<div id="pr">
+	 	<p>WELCOME TO OUR SHOP</p>
 		</div>
 	</div>
+
+
+
 	<div id="main">
 		<div id="top">
-			<p>WELCOME TO OUR SHOP</p>
-		</div>
+
+
 
 
 
@@ -82,9 +98,15 @@
 			<s:if test="#session.id != null">
 				<p>Reception:<a href='<s:url action="LogoutAction" />'>Please this way</a></p>
 			</s:if>
-
+          </div>
 		</div>
 	</div>
+
+
+
+
+
+
 	<div id="footer">
 	 	<div id="pr">
 		</div>

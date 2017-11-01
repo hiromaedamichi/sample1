@@ -22,9 +22,10 @@
 		   line-height:1.6;
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
-		   font-size:12px;
-		   color:#666666;
-		   background:#FFFFFF;
+		   font-size:15px;
+		   color:#000 ;
+		   background:url(img/menu.jpg)no-repeat center scroll ;
+		   background-size:cover;
 		}
 
 		table {
@@ -33,16 +34,13 @@
 		}
 
 	/* ========ID LAYOUT======== */
-		#top {
-		   width:780px;
-		   margin:30px auto;
-		   border:1px solid #444444;
-		}
+
 
 		#header {
 		   width: 100%;
-		   height: 80px;
-		   background-color:#471400;
+		   height: 70px;
+		   background-color:#110000;
+		   margin-top:-30px;
 		}
 
 		#main {
@@ -53,22 +51,31 @@
 
 		#footer {
 			width: 100%;
-			height: 80px;
-			background-color:#471400;
+			height: 18px;
+			background-color:#110000;
 			clear:both;
 		}
+
+		#pot {
+		      margin:auto;
+		      text-align:center;
+		     font-size:26px;
+		     color:#EEEEEE;
+        }
+
+
+
+
 	</style>
 </head>
 <body>
 	<div id="header">
-	 	<div id="pr">
-		</div>
-	</div>
-	<div id="main">
-		<div id="top">
+	 	<div id="pot">
 			<p>ORDER</p>
 		</div>
-		<div>
+	</div>
+
+     <div id="main">
 		<s:form action="BuyItemAction">
 			<table>
 				<tr>
@@ -118,11 +125,10 @@
 			</table>
 		</s:form>
 			<div>
-				<p>戻る場合は<a href='<s:url action="GoHomeAction" />'>please this way</a></p>
-				<p>OderList<a href='<s:url action="MyPageAction" />'>please this way</a></p>
+				<p>お戻る場合は<a href='<s:url action="GoHomeAction" />'>please this way</a></p>
+				<p>OderList:<a href='<s:url action="MyPageAction" />'>please this way</a></p>
 			</div>
 		</div>
-	</div>
 	<div id="footer">
 	 	<div id="pr">
 		</div>
