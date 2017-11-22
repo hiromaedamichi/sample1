@@ -22,92 +22,93 @@
 		   line-height:1.6;
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
-		   font-size:12px;
-		   color:#FFD700;
-		   background:#000;
+		   font-size:16px;
+		   color:white;
+		   background-color:#00ccff;
 		}
-
-		table {
-			text-align:center;
-			margin:0 auto;
-		}
-
-		/* ========ID LAYOUT======== */
-		#top {
-		   width:780px;
-		   margin:30px auto;
-		   border:1px solid #FF9900;
-		}
-
-		#header {
+		
+		.header {
 		   width: 100%;
-		   height: 80px;
-		   background-color:#FF9900;
+		   height: 90px;
+		   background-color:#00ccff;
+		}
+		
+		.top {
+		   margin:10px auto 0px;
+		   color:white;
+		   font-size:20px;
 		}
 
-		#main {
+		.main {
 		   width: 100%;
-		   height: 500px;
-		   text-align: center;
+		   height: 600px;
+		   
+		}
+		
+		.table1{
+		  width:500px;
+		  height:200px;
+		  text-align: center;
+		   border:solid 2px white;
+		   backgroud-color:00ccff;
+		}
+		
+		.next{
+		  
 		}
 
-		#footer {
+		.footer {
 			width: 100%;
-			height: 80px;
-			background-color:#FF9900;
+			height: 70px;
+			background-color:#00ccff;
 			clear:both;
+		}
+		
+		.mark{
+		      text-align:center;
 		}
 	</style>
 </head>
 <body>
 	<div id="header">
-	 	<div id="pr">
+	 	<div id="top">
+		<p>メンバー登録</p>
 		</div>
 	</div>
 	<div id="main">
-		<div id="top">
-			<p>CLUB PASS</p>
-		</div>
-		<div>
-			<s:if test="errorMassage != ''">
-				<s:property value="errorMassage" escape="false" />
-			</s:if>
-			<table>
-			<s:form action="UserCreateConfirmAction">
-				<tr>
-					<td>
-						<label>YourID:</label>
-					</td>
-					<td>
-						<input type="text" name="loginUserId" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>YourPASSWORD:</label>
-					</td>
-					<td>
-						<input type="text" name="loginPassword" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>YourNAME:</label>
-					</td>
-					<td>
-						<input type="text" name="userName" value="" />
-					</td>
-				</tr>
-				<s:submit value="Registration"/>
+		
+		<s:if test="errorMassage != ''">
+		<s:property value="errorMassage" escape="false" />
+		</s:if>
+
+		<table class="table1">	
+		<s:form action="UserCreateConfirmAction">
+		    <tr>
+		     <td><label>ID:</label></td>
+		     <td><input type="text" name="loginUserId" value="" /></td>
+		     </tr>
+		     
+		      <tr>
+		      <td><label>PASSWORD:</label></td>
+		      <td><input type="text" name="loginPassword" value="" /></td>
+		      </tr>
+				
+		      <tr>
+       		      <td><label>NAME:</label></td>
+		      <td><input type="text" name="userName" value="" /></td>
+		       </tr>
+				<input type="submit" name="next" value="次へ"　class="next"/>
 			</s:form>
 			</table>
+			
 			<div>
-				<span>return Reciption</span><a href='<s:url action="HomeAction" />'>  please this way</a>
+			<span>ログイン画面へ</span><a href='<s:url action="HomeAction" />'>戻る</a>
 			</div>
-		</div>
+		
 	</div>
 		<div id="footer">
-	 	<div id="pr">
+	 	<div id="mark">
+		wings×future
 		</div>
 	</div>
 </body>
