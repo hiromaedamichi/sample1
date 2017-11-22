@@ -20,96 +20,83 @@
 		   line-height:1.6;
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
-		   font-size:12px;
-		   color:black;
+		   font-size:16px;
+		   color:＃00ccff;
 		   background:url(img/front.jpg) no-repeat center scroll;
-
-
 		}
-
-		table {
-			text-align:center;
-			margin:0 auto;
-		}
-
-		/* ========TEMPLATE LAYOUT======== */
-		#top {
-		   width:90%;
-		   margin:30px auto;
-
-		}
-
-		#header {
+		.header {
 		   width: 100%;
-		   height: 60px;
-		   background-color:#BB0000;
-		   margin-top:-20px;
+		   height: 90px;
+		   background-color:#00ccff;
+		   margin-top:-30px;
+		}
+		.top {
+		   text-align:center;
+		   color:white;
+		  font-weight:bold;
+	          }
+		.welcome{
+		    text-align:center;
+		    font-size:20px;
+		    color:white;
+		    front-weight:bold;
+		}
+		
+		.to{
+		   text-align:center;
+		    font-size:20px;
+		    color:white;
+		    front-weight:bold;
 		}
 
-		#main {
+		
+
+		.main {
 		   width: 100%;
-		   height: 500px;
-		   text-align: center;
+		   height: 600px;
+		   text-align:center;
+		}
+		
+		.logo{
+		     text-align:center;
+		     color:#00ccff;
+		}
+		
+		.btn{
+		    margin:30px auto 0px;
+		    
 		}
 
-		#footer {
+		.footer {
 			width: 100%;
 			height: 60px;
-			background-color:#BB0000;
+			background-color:#00ccff;
 			clear:both;
-		}
-
-		#text-center {
-			display: inline-block;
-			position:relative; top:400px;
-
-
-		}
-
-		#pr {
-	         width:300px;
-              margin:auto;
-	       font-size:20px;
-	         color:#FFA500;
 		}
 	</style>
 </head>
 <body>
 
-	<div id="header">
-	 	<div id="pr">
-	 	<p>WELCOME TO OUR SHOP</p>
+	<div class="header">
+	 	<div class="top">
+	 	<p class="welcome">WELCOME</p>
+		<p class="to">TO</p>
 		</div>
 	</div>
 
-
-
-	<div id="main">
-		<div id="top">
-
-
-
-
-
-		<div id="text-center">
-			<s:form action="HomeAction">
-				<s:submit value="Please follow me"/>
-			</s:form>
-			<s:if test="#session.id != null">
-				<p>Reception:<a href='<s:url action="LogoutAction" />'>Please this way</a></p>
-			</s:if>
-          </div>
+	<div class="main">
+		<div class="logo">
+		 <h1>WINGS</h1>
 		</div>
+		
+		<s:form action="HomeAction">
+		   <div class="btn"><input type="submit"  name="enter" value="enter"/></div>
+		</s:form>
+		 <s:if test="#session.id != null">
+			<p>こちら<a href='<s:url action="LogoutAction" />'>こちら</a></p>
+		</s:if>
 	</div>
-
-
-
-
-
-
-	<div id="footer">
-	 	<div id="pr">
-		</div>
+	<div class="footer">
 	</div>
 </body>
 </html>
