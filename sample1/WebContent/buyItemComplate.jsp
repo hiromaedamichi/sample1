@@ -15,69 +15,79 @@
 	<meta charset="utf-8">
 	<title>BuyItemComplate画面</title>
 	<style type="text/css">
-	/* ========TAG LAYOUT======== */
-		body {
+	    body {
 		   margin:0;
 		   padding:0;
 		   line-height:1.6;
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
-		   font-size:12px;
-		   color:#FFB800;
-		   background:#110000;
+		   font-size:16px;
+		   color:#00ccff;
+		   background:white;
 		}
-
-		table {
-			text-align:center;
-			margin:0 auto;
-		}
-
-	/* ========ID LAYOUT======== */
-		#top {
-		   width:780px;
-		   margin:30px auto;
-		   border:1px solid #FFB800;
-		}
-
-		#header {
+		
+		.header {
 		   width: 100%;
-		   height: 80px;
-		   background-color:#CC0000;
+		   height: 90px;
+		   background-color:#00ccff;
+
+	       .top {
+		   text-align:center;
+		   color:white;
 		}
 
-		#main {
+		
+		}
+
+		.main {
 		   width: 100%;
-		   height: 500px;
+		   height: 600px;
 		   text-align: center;
 		}
+		
+		.thanks{
+	               width:800px;
+			height:50px;
+			text-align:center;
+			color:#ooccff;
+		}
+		
+		.other{
+		      textalign:center;
+			color:#00ccff;
+		}
 
-		#footer {
+		.footer {
 			width: 100%;
-			height: 80px;
-			background-color: #CC0000;
+			height: 70px;
+			background-color: #00ccff;
 			clear:both;
+		}
+		
+		.message{
+		         color:white;
+			text-align:center;
 		}
 	</style>
 </head>
 <body>
-	<div id="header">
-	 	<div id="pr">
+	<div class="header">
+	 	<div class="top">
+			<p>購入て続きが完了しました。</p>
 		</div>
 	</div>
-	<div id="main">
-		<div id="top">
-			<p>We are looking forward to seeing you again at the store!</p>
-		</div>
-		<div>
-			<p>購入手続きが完了致しました。</p>
-			<div>
-				<a href='<s:url action="MyPageAction" />'>OrederList</a><span>から購入履歴の確認が可能です。</span>
-				<p>FRONTへ戻る場合は<a href='<s:url action="GoHomeAction" />'>Please this way</a></p>
+	<div clas="main">
+		
+		<div　class="thanks"><p>注文ありがとうございます。<br>今後もWINGSのご利用よろしくお願いします。</p><div>
+		<div class="other">
+			<a href='<s:url action="MyPageAction" />'>こちら</a><span>から購入履歴の確認が可能です。</span>
+				<p>HOMEへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 			</div>
 		</div>
 	</div>
-	<div id="footer">
-		<div id="pr">
+	<div class="footer">
+		<div class="message">
+			WINNGSFUTURE
 		</div>
 	</div>
 </body>
