@@ -22,45 +22,54 @@
 		   line-height:1.6;
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
-		   font-size:15px;
-		   color:#000 ;
+		   font-size:16px;
+		   color:white;
 		   background:url(img/menu.jpg)no-repeat center scroll ;
 		   background-size:cover;
 		}
 
-		table {
-			text-align:center;
-			margin:0 auto;
-		}
 
-	/* ========ID LAYOUT======== */
-
-
-		#header {
+		.header {
 		   width: 100%;
-		   height: 70px;
-		   background-color:#110000;
+		   height: 90px;
+		   background-color:#00ccff;
 		   margin-top:-30px;
 		}
-
-		#main {
-		   width: 100%;
-		   height: 500px;
-		   text-align: center;
+		
+		.top{
+	          textalign:center;
+		  font-size:white;
+	          font-size:30px;
+		 font-weight:bold;	
 		}
 
-		#footer {
+		.main {
+		   width: 100%;
+		   height: 600px;
+		   text-align: center;
+		}
+		
+		.t1{
+		   width:500px;
+		   height:300px;
+		   margin:20px auto 0px;
+		   border:1px solid #00ccff;
+		}
+		
+		.buy{}
+		
+
+		.footer {
 			width: 100%;
-			height: 18px;
-			background-color:#110000;
+			height: 70px;
+			background-color:#00ffcc;
 			clear:both;
 		}
 
-		#pot {
-		      margin:auto;
+		.class {
 		      text-align:center;
-		     font-size:26px;
-		     color:#EEEEEE;
+		     font-size:14px;
+		     color:#00ccff;
         }
 
 
@@ -69,68 +78,59 @@
 	</style>
 </head>
 <body>
-	<div id="header">
-	 	<div id="pot">
-			<p>ORDER</p>
+	<div class="header">
+	 	<div class="top">
+			<p>SHOPPING</p>
 		</div>
 	</div>
 
-     <div id="main">
+     <div class="main">
 		<s:form action="BuyItemAction">
-			<table>
-				<tr>
-					<td>
-						<span>name</span>
-					</td>
-					<td>
-						<s:property value="session.buyItem_name" /><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span>price</span>
-					</td>
-					<td>
-						<span>￥</span><s:property value="session.buyItem_price" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span>number</span>
-					</td>
-					<td>
-						<select name="count">
-							<option value="1" selected="selected">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span>method of payment</span>
-					</td>
-					<td>
-						<input type="radio" name="pay" value="1" checked="checked">cash
-						<input type="radio" name="pay" value="2">creditcard
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<s:submit value="Decision"/>
-					</td>
-				</tr>
+			<table class="t1">
+			<tr>
+			<td><span>商品名</span></td>
+			<td><s:property value="session.buyItem_name" /></td>
+			</tr>
+				
+			<tr>
+			<td><span>金額</span></td>
+			<td><span>￥</span><s:property value="session.buyItem_price" /></td>
+			</tr>
+				
+			<tr>
+			<td><span>足数</span></td>
+			<td><select name="count">
+			<option value="1" selected="selected">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			</select>
+			</td>
+			</tr>
+				
+			<tr>
+			<td>
+			<span>支払い方法</span>
+			</td>
+			<td>
+			<input type="radio" name="pay" value="1" checked="checked">現金
+			<input type="radio" name="pay" value="2">クレジットカード
+			</td>
+			</tr>
 			</table>
+				
+			
+			<input type="submit" name="buy" value="購入" class="buy"/>
 		</s:form>
 			<div>
-				<p>お戻る場合は<a href='<s:url action="GoHomeAction" />'>please this way</a></p>
-				<p>OderList:<a href='<s:url action="MyPageAction" />'>please this way</a></p>
+				<p>戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
+				<p>注文履歴は<a href='<s:url action="MyPageAction" />'>こちら</a></p>
 			</div>
 		</div>
-	<div id="footer">
-	 	<div id="pr">
+	<div class="footer">
+	 	<div class="message">
+			WINGS×FUTURE
 		</div>
 	</div>
 </body>
