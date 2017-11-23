@@ -17,47 +17,51 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<title>BuyItemConfirm画面</title>
 	<style type="text/css">
-	/* ========TAG LAYOUT======== */
+	
 		body {
 		   margin:0;
 		   padding:0;
 		   line-height:1.6;
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
-		   font-size:12px;
-		   color:#666666;
-		   background:#fff;
+		   font-size:16px;
+		   color:white;
+		   
 		}
-
-		table {
-			text-align:center;
-			margin:0 auto;
-		}
-
-	/* ========ID LAYOUT======== */
-		#top {
-		   width:780px;
-		   margin:30px auto;
-		   border:1px solid #444;
-		}
-
-		#header {
+		.header {
 		   width: 100%;
-		   height: 80px;
-		   background-color:#471400;
+		   height: 90px;
+		   background-color:#00ccff;
+		}
+		
+		.top {
+		   text-align:center;
+		   font-size:40px;
+		   color:white;
 		}
 
-		#main {
+		
+
+		.main {
 		   width: 100%;
-		   height: 500px;
+		   height: 600px;
 		   text-align: center;
 		}
+		
+		.yes{}
+		
+		.no{}
 
-		#footer {
+		.footer {
 			width: 100%;
-			height: 80px;
-			background-color:#471400;
+			height: 70px;
+			background-color:#00ccff;
 			clear:both;
+		}
+		
+		.message{
+		     text-align:center;
+		     color:white;
 		}
 	</style>
 	<script type="text/javascript">
@@ -68,46 +72,42 @@
 	</script>
 </head>
 <body>
-	<div id="header">
-	 	<div id="pr">
+	<div class="header">
+	 	<div class="top">
+			<p>購入内容の確認</p>
 		</div>
 	</div>
 	<div id="main">
-		<div id="top">
-			<p>Are You Sure You want here?</p>
-		</div>
-		<div>
-			<s:form>
-				<tr>
-					<td>name</td>
-					<td><s:property value="session.buyItem_name" /></td>
-				</tr>
-				<tr>
-					<td>price</td>
-					<td><span>￥</span><s:property value="session.total_price" /></td>
-				</tr>
-				<tr>
-					<td>number</td>
-					<td><s:property value="session.count" /><span>品</span></td>
-				</tr>
-				<tr>
-					<td>method of payment</td>
-					<td><s:property value="session.pay" /></td>
-				</tr>
-				<tr>
-					<td>
-						<br>
-					</td>
-				</tr>
-				<tr>
-					<td><input type="button" value="NO" onclick="submitAction('HomeAction')" /></td>
-					<td><input type="button" value="YES" onclick="submitAction('BuyItemConfirmAction')" /></td>
-				</tr>
-			</s:form>
-		</div>
+	 <s:form>
+	   <tr>
+	   <td>商品名</td>
+	   <td><s:property value="session.buyItem_name" /></td>
+	   </tr>
+				
+	   <tr>
+	   <td>金額</td>
+	   <td><span>￥</span><s:property value="session.total_price" /></td>
+	   </tr>
+	   
+	    <tr>
+	   <td>足数</td>
+	   <td><s:property value="session.count" /><span>品</span></td>
+	   </tr>
+				
+	   <tr>
+	   <td>支払い方法</td>
+	   <td><s:property value="session.pay" /></td>
+	   </tr>
+	
+           <tr>
+	  <td><input type="button" value="NO" onclick="submitAction('HomeAction')" class="no"/></td>
+	   <td><input type="button" value="YES" onclick="submitAction('BuyItemConfirmAction')" class="yse" /></td>
+	   </tr>
+	  </s:form>
 	</div>
-	<div id="footer">
-		<div id="pr">
+	<div class="footer">
+		<div class="message">
+		WINGS×FUTURE
 		</div>
 	</div>
 </body>
