@@ -15,7 +15,6 @@
 	<meta charset="utf-8">
 	<title>Login画面</title>
 	<style type="text/css">
-
 		/* ========TAG LAYOUT======== */
 		body {
 		   margin:0;
@@ -29,52 +28,48 @@
 /* 		   background:url(img/reception.jpg) no-repeat ; */
 /* 		   background-size:cover; */
 		}
-
 		.header {
 		   width: 100%;
 		   height: 100px;
 		   background-color:#00ccff;
 		   margin-top:-40px;
 		}
-
 		.top {
 		   font-size:40px;
 		   text-align:center;
 		    color:white;
 		    font-weight:bold;
 		}
-
 		.h3{
 		   font-size:20px;
 		}
-
 		.table1{
 			width:500px;
 			height:200px;
 			border:solid 1px #00ccff;
 			margin:30px auto 0px;
 		}
-
 		.main {
 		   width: 100%;
 		   height: 600px;
 		   text-align: center;
 		}
-
 		.footer {
 			width: 100%;
 			height: 80px;
 			background-color:#00ccff;
 			clear:both;
 		}
-
 		.link {
 			text-align:center;
 		}
-
 		.link2{
 			text-align:center;
 		}
+        
+        .message{
+            text-align: center;
+        
 	</style>
 </head>
 <body>
@@ -90,6 +85,11 @@
 			<h3>IDとPASSWORDを入力してください。</h3>
 			</div>
 			<s:form action="LoginAction">
+                <div class="error">
+                <s:if test="errrorMessage!=''">
+                <s:property value="errorMessage" escape="false" />
+                    </s:if>
+                </div>
 				<table class="table1">
 				<tr>
 				<td>ID</td><td><input type="text" name="loginUserId" value="" /></td>
@@ -105,11 +105,15 @@
 			<div class="link">
 				<p>新規の方は<a href='<s:url action="UserCreateAction" />'>こちら</a></p>
 			</div>
+        <div class="link2">
+	 	<p>HOMEへ<a href='<s:url action="GoHomeAction" />'>戻る</a></p>
+		</div>
 	</div>
 
 	<div class="footer">
-	 	<div class="link2">
-	 	<p>HOMEへ<a href='<s:url action="GoHomeAction" />'>戻る</a></p>
-		</div>
+        <div class="message">
+            WINGS×FUTURE
+        </div>
+	 	
 	</div>
 </body>
