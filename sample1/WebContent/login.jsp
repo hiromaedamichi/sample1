@@ -23,75 +23,93 @@
 		   line-height:1.6;
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
-		   font-size:14px;
-		   color:#ffd700;
-		   background:url(img/reception.jpg) no-repeat ;
-		   background-size:cover;
+		   font-size:16px;
+		   color:#00ccff;
+		   backgroud-color:silver;
+/* 		   background:url(img/reception.jpg) no-repeat ; */
+/* 		   background-size:cover; */
 		}
 
-		table {
-			text-align:center;
-			margin:0 auto;
-		}
-
-		/* ========ID LAYOUT======== */
-		#top {
-		   width:90%;
-		   margin:30px auto;
-		   border:1px solid #e9bc00;
-		}
-
-		#header {
+		.header {
 		   width: 100%;
-		   height: 40px;
-		   background-color:#990000;
+		   height: 100px;
+		   background-color:#00ccff;
+		   margin-top:-40px;
 		}
 
-		#main {
+		.top {
+		   font-size:40px;
+		   text-align:center;
+		    color:white;
+		    font-weight:bold;
+		}
+
+		.h3{
+		   font-size:20px;
+		}
+
+		.table1{
+			width:500px;
+			height:200px;
+			border:solid 1px #00ccff;
+			margin:30px auto 0px;
+		}
+
+		.main {
 		   width: 100%;
-		   height: 500px;
+		   height: 600px;
 		   text-align: center;
 		}
 
-		#footer {
+		.footer {
 			width: 100%;
-			height: 40px;
-			background-color:#990000;
+			height: 80px;
+			background-color:#00ccff;
 			clear:both;
 		}
 
-		#text-link {
-			display: inline-block;
-			text-align: right;
+		.link {
+			text-align:center;
+		}
+
+		.link2{
+			text-align:center;
 		}
 	</style>
 </head>
 <body>
-	<div id="header">
-	 	<div id="pr">
+	<div class="header">
+	 	<div class="top">
+			<p>ログイン</p>
 		</div>
+
 	</div>
-	<div id="main">
-		<div id="top">
-			<p>Reception</p>
-		</div>
-		<div>
-			<h3>May I Have yourId and yourPassword?</h3>
+	<div class="main">
+
+		<div class="h3">
+			<h3>IDとPASSWORDを入力してください。</h3>
+			</div>
 			<s:form action="LoginAction">
-				<s:textfield name="loginUserId"/>
-				<s:password name="loginPassword"/>
-				<s:submit value="enter"/>
+				<table class="table1">
+				<tr>
+				<td>ID</td><td><input type="text" name="loginUserId" value="" /></td>
+				</tr>
+				<tr>
+				<td>パスワード</td><td><input type="password" name="loginPassword" value=""/></td>
+				</tr>
+				</table>
+				<input type="submit" value="enter"/>
+
 			</s:form>
 			<br/>
-			<div id="text-link">
-				<p>!New Custormers<a href='<s:url action="UserCreateAction" />'>:please this way</a></p>
-				<p>お帰りの場合は<a href='<s:url action="GoHomeAction" />'>:please this way</a></p>
+			<div class="link">
+				<p>新規の方は<a href='<s:url action="UserCreateAction" />'>こちら</a></p>
 			</div>
-		</div>
 	</div>
-	<div id="footer">
-	 	<div id="pr">
+
+	<div class="footer">
+	 	<div class="link2">
+	 	<p>HOMEへ<a href='<s:url action="GoHomeAction" />'>戻る</a></p>
 		</div>
 	</div>
 </body>
-</html>
