@@ -17,7 +17,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<title>BuyItemConfirm画面</title>
 	<style type="text/css">
-	
+
 		body {
 		   margin:0;
 		   padding:0;
@@ -26,39 +26,49 @@
 		   font-family:Verdana, Helvetica, sans-serif;
 		   font-size:16px;
 		   color:white;
-		   
+
 		}
 		.header {
 		   width: 100%;
 		   height: 90px;
-		   background-color:#00ccff;
+		   background-color:#43c0f6;
+		   margin-top:-40px;
 		}
-		
+
 		.top {
 		   text-align:center;
 		   font-size:40px;
 		   color:white;
 		}
 
-		
+
 
 		.main {
 		   width: 100%;
 		   height: 600px;
 		   text-align: center;
 		}
-		
-		.yes{}
-		
-		.no{}
+		.table{
+				margin:10px auto 0px;
+				width:300px;
+				height:500px;
+		}
+
+		.yes{
+				margin:10px auto 0px;
+		}
+
+		.no{
+				margin:10px auto 0px;
+		}
 
 		.footer {
 			width: 100%;
 			height: 70px;
-			background-color:#00ccff;
+			background-color:#43c0f6;
 			clear:both;
 		}
-		
+
 		.message{
 		     text-align:center;
 		     color:white;
@@ -78,31 +88,33 @@
 		</div>
 	</div>
 	<div id="main">
-	 <s:form>
+	 <s:form action ="BuyItemConfirmAction">
+	 <table class="table">
 	   <tr>
 	   <td>商品名</td>
 	   <td><s:property value="session.buyItem_name" /></td>
 	   </tr>
-				
+
 	   <tr>
 	   <td>金額</td>
 	   <td><span>￥</span><s:property value="session.total_price" /></td>
 	   </tr>
-	   
+
 	    <tr>
 	   <td>足数</td>
 	   <td><s:property value="session.count" /><span>品</span></td>
 	   </tr>
-				
+
 	   <tr>
 	   <td>支払い方法</td>
 	   <td><s:property value="session.pay" /></td>
 	   </tr>
-	
+
            <tr>
 	  <td><input type="button" value="NO" onclick="submitAction('HomeAction')" class="no"/></td>
 	   <td><input type="button" value="YES" onclick="submitAction('BuyItemConfirmAction')" class="yse" /></td>
 	   </tr>
+	   </table>
 	  </s:form>
 	</div>
 	<div class="footer">

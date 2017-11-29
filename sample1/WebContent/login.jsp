@@ -15,7 +15,7 @@
 	<meta charset="utf-8">
 	<title>Login画面</title>
 	<style type="text/css">
-		/* ========TAG LAYOUT======== */
+
 		body {
 		   margin:0;
 		   padding:0;
@@ -23,15 +23,15 @@
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
 		   font-size:16px;
-		   color:#00ccff;
-		   backgroud-color:silver;
+		   color:#43c0f6;
+		   backgroud-color:white;
 /* 		   background:url(img/reception.jpg) no-repeat ; */
 /* 		   background-size:cover; */
 		}
 		.header {
 		   width: 100%;
 		   height: 100px;
-		   background-color:#00ccff;
+		   background-color:#43c0f6;
 		   margin-top:-40px;
 		}
 		.top {
@@ -46,7 +46,7 @@
 		.table1{
 			width:500px;
 			height:200px;
-			border:solid 1px #00ccff;
+			border:solid 1px #43c0f6;
 			margin:30px auto 0px;
 		}
 		.main {
@@ -54,10 +54,15 @@
 		   height: 600px;
 		   text-align: center;
 		}
+		.s{
+		   width:25px;
+		   height:25px;
+		}
+
 		.footer {
 			width: 100%;
 			height: 80px;
-			background-color:#00ccff;
+			background-color:#43c0f6;
 			clear:both;
 		}
 		.link {
@@ -66,10 +71,11 @@
 		.link2{
 			text-align:center;
 		}
-        
-        .message{
-            text-align: center;
-        
+
+		.message{
+		    text-align:center;
+		    color:white;
+		}
 	</style>
 </head>
 <body>
@@ -85,35 +91,37 @@
 			<h3>IDとPASSWORDを入力してください。</h3>
 			</div>
 			<s:form action="LoginAction">
-                <div class="error">
-                <s:if test="errrorMessage!=''">
-                <s:property value="errorMessage" escape="false" />
-                    </s:if>
-                </div>
+			<s:if test="missmatch!=''">
+     <s:property value="missmatch" escape="false" />
+     </s:if>
 				<table class="table1">
 				<tr>
-				<td>ID</td><td><input type="text" name="loginUserId" value="" /></td>
+				<td>ID</td><td><input type="text" name="login_id" value="" /></td>
 				</tr>
 				<tr>
-				<td>パスワード</td><td><input type="password" name="loginPassword" value=""/></td>
+				<td>パスワード</td><td><input type="password" name="login_pass" value=""/></td>
+				</tr>
+
+				<tr>
+				<td>保存<input type="checkbox" name="save" value=true  class="s" /></td>
+				<td><input type="submit" value="enter"/></td>
 				</tr>
 				</table>
-				<input type="submit" value="enter"/>
 
 			</s:form>
 			<br/>
 			<div class="link">
 				<p>新規の方は<a href='<s:url action="UserCreateAction" />'>こちら</a></p>
 			</div>
-        <div class="link2">
+
+			<div class="link2">
 	 	<p>HOMEへ<a href='<s:url action="GoHomeAction" />'>戻る</a></p>
 		</div>
 	</div>
 
 	<div class="footer">
-        <div class="message">
-            WINGS×FUTURE
-        </div>
-	 	
+	<div class="message">
+	WINGS×FUTURE
+	</div>
 	</div>
 </body>

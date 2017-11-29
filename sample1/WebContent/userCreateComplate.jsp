@@ -23,46 +23,48 @@
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
 		   font-size:16px;
-		   color:white;
-		   background:#00ccff;
+		   color:#43c0f6;
+
 		}
-		
+
 		.header {
 		   width:100%;
 		   height:90px;
-		   background-color: #00ccff;
+		   background-color: #43c0f6;
+
 		}
 
 		.top {
 		   color:white;
 		   font-weight:bold;
-		   font-size:50px;
+		   font-size:20px;
+		   text-align:center;
 		}
-		
+
 		.main {
 		   width: 100%;
 		   height: 600px;
 		   text-align: center;
 		}
-		
+
 		.asi{
-		   width:800px;
-		   height:90px;
-		   color:00ccff;
+			margin:90px auto 0px;
+			 font-size:38px;
 		}
 
-		#footer {
-			width: 100%;
+
+		.footer {
+			width:100%;
 			height: 80px;
-			background-color:#00ccff;
+			background-color:#43c0f6;
 			clear:both;
 		}
-		
+
 		.link{
-	              text-align:center;	S
+	           text-align:center;
 		}
-		
-		.h3{
+
+		.message{
 		   text-align:center;
 		}
 	</style>
@@ -70,18 +72,18 @@
 <body>
 	<div class="header">
 	 	<div class="top">
-			<p>メンバーの登録が完了しました</p>
+			メンバーの登録が完了しました
 		</div>
 	</div>
 	<div class="main">
-		<div class="asi"><h3>WINGSは楽しい足足をつくるためのサポートをいたします。</h3></div>
+		<div class="asi">WINGSは楽しい足足をつくるためのサポートをいたします。</div>
 		<div class="link">
 		<a href='<s:url action="HomeAction" />'>ログインへ</a>
 		</div>
 	</div>
-	<div id="footer">
-	 	<div class="h3">
-			wings×future
+	<div class="footer">
+	 	<div class="message">
+			WINGS×FUTURE
 		</div>
 	</div>
 </body>

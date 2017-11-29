@@ -23,24 +23,24 @@
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
 		   font-size:16px;
-		   color:white;
-		   background:url(img/menu.jpg)no-repeat center scroll ;
-		   background-size:cover;
+		   color:#43c0f6;
+/* 		   background:url(img/menu.jpg)no-repeat center scroll ; */
+/* 		   background-size:cover; */
 		}
 
 
 		.header {
 		   width: 100%;
 		   height: 90px;
-		   background-color:#00ccff;
+		   background-color:#43c0f6;
 		   margin-top:-30px;
 		}
-		
+
 		.top{
-	          textalign:center;
-		  font-size:white;
+	          text-align:center;
+		  color:white;
 	          font-size:30px;
-		 font-weight:bold;	
+		 font-weight:bold;
 		}
 
 		.main {
@@ -48,33 +48,29 @@
 		   height: 600px;
 		   text-align: center;
 		}
-		
+
 		.t1{
 		   width:500px;
 		   height:300px;
 		   margin:20px auto 0px;
-		   border:1px solid #00ccff;
+		   border:1px solid #43c0f6;
 		}
-		
+
 		.buy{}
-		
+
 
 		.footer {
 			width: 100%;
 			height: 70px;
-			background-color:#00ffcc;
+			background-color:#43c0f6;
 			clear:both;
 		}
 
-		.class {
-		      text-align:center;
-		     font-size:14px;
-		     color:#00ccff;
-        }
+        .message{
+		    text-align:center;
+		    color:white;
 
-
-
-
+		}
 	</style>
 </head>
 <body>
@@ -91,12 +87,12 @@
 			<td><span>商品名</span></td>
 			<td><s:property value="session.buyItem_name" /></td>
 			</tr>
-				
+
 			<tr>
 			<td><span>金額</span></td>
 			<td><span>￥</span><s:property value="session.buyItem_price" /></td>
 			</tr>
-				
+
 			<tr>
 			<td><span>足数</span></td>
 			<td><select name="count">
@@ -108,7 +104,7 @@
 			</select>
 			</td>
 			</tr>
-				
+
 			<tr>
 			<td>
 			<span>支払い方法</span>
@@ -118,10 +114,13 @@
 			<input type="radio" name="pay" value="2">クレジットカード
 			</td>
 			</tr>
+			<tr>
+			<td><input type="submit" name="buy" value="購入" class="buy"/></td>
+			</tr>
 			</table>
-				
-			
-			<input type="submit" name="buy" value="購入" class="buy"/>
+
+
+
 		</s:form>
 			<div>
 				<p>戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>

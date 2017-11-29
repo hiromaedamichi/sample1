@@ -25,13 +25,14 @@
 		   font-family:Verdana, Helvetica, sans-serif;
 		   font-size:16px;
 		   color:white;
-		   background:#00cccff;
+		   background:#43c0f6;
 		}
-		
+
 		.header {
 		   width: 100%;
 		   height: 90px;
-		   background-color:#00ccff;
+		   background-color:#43c0f6;
+		   margin:-20px;
 		}
 
 		.top {
@@ -45,24 +46,25 @@
 		   height: 600px;
 		   text-align: center;
 		}
-		
+
 		.h3{
 		    width:300px;
 		    height:30px;
 		}
 
 		.box {
-			border: 1px solid:#00ccff;
+			border: 1px solid #43c0f6;
+			margin:0px auto;
 		}
 
 		.footer {
 			width: 100%;
 			height: 80px;
-			background-color:#00ccff;
+			background-color:#43c0f6;
 			clear:both;
 		}
-		
-		.h3{
+
+		.message{
 		text-align:center;
 		}
 	</style>
@@ -73,33 +75,33 @@
 	    <p>登録内容を確認して下さい。</p>
 	</div>
 	</div>
-	
+
 	<div class="main">
 	  <div><h3>登録する内容は以下でよろしいですか。</h3></div>
-	     <table class="box">
+
 		<s:form action="UserCreateComplateAction">
+		<table class="box">
 		<tr>
-		<td><label>ID:</label></td>
+		<th>ID:</th>
 		<td><s:property value="loginUserId" escape="false" /></td>
 		</tr>
-		<tr>		
-		<td><label>PASSWORD:</label></td>
+		<tr>
+		<th>PASSWORD:</th>
 		<td><s:property value="loginPassword" escape="false" /></td>
 		</tr>
-		
 		<tr>
-		<td><label>NAME:</label></td>
+		<th>NAME:</th>
 		<td><s:property value="userName" escape="false" /></td>
 		</tr>
-					
+		</table>
+
 		<input type="submit"  name="OK"value="OK" />
 		</s:form>
-		</table>
 		</div>
-	
-	<div id="footer">
-	 	<div class="h3">
-		wings×future
+
+	<div class="footer">
+	 	<div class="message">
+		WINGS×FUTURE
 		</div>
 	</div>
 </body>

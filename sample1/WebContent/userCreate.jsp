@@ -23,92 +23,101 @@
 		   letter-spacing:1px;
 		   font-family:Verdana, Helvetica, sans-serif;
 		   font-size:16px;
-		   color:white;
-		   background-color:#00ccff;
+		   color:#43c0f6;
 		}
-		
+
 		.header {
 		   width: 100%;
 		   height: 90px;
-		   background-color:#00ccff;
+		   background-color:#43c0f6;
+		   margin:-29px;
 		}
-		
+
 		.top {
-		   margin:10px auto 0px;
+		   text-align:center;
 		   color:white;
-		   font-size:20px;
+		   font-size:28px;
 		}
 
 		.main {
 		   width: 100%;
 		   height: 600px;
-		   
+
+
 		}
-		
+
 		.table1{
 		  width:500px;
 		  height:200px;
 		  text-align: center;
-		   border:solid 2px white;
-		   backgroud-color:00ccff;
+		   border:solid 2px ;
+		    margin:100px auto 0px;
 		}
-		
+
 		.next{
-		  
+				margin: 20px auto 0px;
+				text-align:center;
+
+
 		}
 
 		.footer {
 			width: 100%;
 			height: 70px;
-			background-color:#00ccff;
+			background-color:#43c0f6;
 			clear:both;
 		}
-		
+
 		.mark{
+		      text-align:center;
+		      color:white;
+		}
+
+		.link{
 		      text-align:center;
 		}
 	</style>
 </head>
 <body>
-	<div id="header">
-	 	<div id="top">
+	<div class="header">
+	 	<div class="top">
 		<p>メンバー登録</p>
 		</div>
 	</div>
-	<div id="main">
-		
+	<div class="main">
+
 		<s:if test="errorMassage != ''">
 		<s:property value="errorMassage" escape="false" />
 		</s:if>
 
-		<table class="table1">	
 		<s:form action="UserCreateConfirmAction">
+		<table class="table1">
 		    <tr>
-		     <td><label>ID:</label></td>
+		     <th>ID:</th>
 		     <td><input type="text" name="loginUserId" value="" /></td>
 		     </tr>
-		     
+
 		      <tr>
-		      <td><label>PASSWORD:</label></td>
+		      <th>PASSWORD:</th>
 		      <td><input type="text" name="loginPassword" value="" /></td>
 		      </tr>
-				
+
 		      <tr>
-       		      <td><label>NAME:</label></td>
+       		      <th>NAME:</th>
 		      <td><input type="text" name="userName" value="" /></td>
 		       </tr>
-				<input type="submit" name="next" value="次へ"　class="next"/>
-			</s:form>
 			</table>
-			
-			<div>
+			<div class="next"><input type="submit" name="next" value="次へ" /></div>
+			</s:form>
+
+			<div class="link">
 			<span>ログイン画面へ</span><a href='<s:url action="HomeAction" />'>戻る</a>
 			</div>
-		
+
 	</div>
-		<div id="footer">
-	 	<div id="mark">
-		wings×future
+		<div class="footer">
+	 	<div class="mark">
+		WINGS×FUTURE
 		</div>
 	</div>
 </body>
